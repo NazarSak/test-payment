@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
 import PaymentForm from 'components/PaymentForm/PaymentForm';
+import Notiflix from 'notiflix';
 
 import {
   WalletContainer,
@@ -26,22 +27,19 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
     console.log('tx', tx);
     setTxs([tx]);
   } catch (err) {
-    setError(err.message);
+    Notiflix.Notify.failure(err.message);
   }
 };
 
 const UserAccount = () => {
   const [userAccount, setUserAccount] = useState('');
   const [balance, setBalance] = useState(0);
-  const [error, setError] = useState();
   const [txs, setTxs] = useState([]);
 
   const handleSubmit = async e => {
     e.preventDefault();
     const data = new FormData(e.target);
-    setError();
     await startPayment({
-      setError,
       setTxs,
       ether: data.get('ether'),
       addr: data.get('addr'),
@@ -87,7 +85,7 @@ const UserAccount = () => {
             <InfoTitle>Your balance: {balance} ETH</InfoTitle>
           </WalletContainer>
 
-          <PaymentForm handleSubmit={handleSubmit} txs={txs} error={error} />
+          <PaymentForm handleSubmit={handleSubmit} txs={txs} />
         </main>
       ) : (
         <WalletContainer>
