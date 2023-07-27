@@ -60,7 +60,7 @@ const UserAccount = () => {
       window.ethereum.on('accountChanged', Conection);
       window.ethereum.on('chainChanged', ChangedAccount);
     } else {
-      alert('Please');
+      Notiflix.Notify.warning(`Please download Metamask`)
     }
   };
 
