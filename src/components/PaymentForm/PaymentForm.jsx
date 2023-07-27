@@ -1,5 +1,5 @@
 import TxList from 'components/Decorators/TxList';
-import { Wrapper, Button, Input} from './PaymentForm.styled';
+import { Wrapper, Button, Input } from './PaymentForm.styled';
 import { WalletTitle } from 'components/userAccount/userAccount.styled';
 
 const PaymentForm = ({ handleSubmit, txs }) => {
@@ -9,12 +9,9 @@ const PaymentForm = ({ handleSubmit, txs }) => {
         <Wrapper>
           <WalletTitle>Send ETH payment</WalletTitle>
 
-          <div>
-            <Input type="text" name="addr" placeholder="Recipient Address" />
-          </div>
-          <div className="my-3">
-            <Input name="ether" type="text" placeholder="Amount in ETH" />
-          </div>
+          <Input type="text" name="addr" placeholder="Recipient Address" />
+
+          <Input name="ether" type="text" placeholder="Amount in ETH" />
 
           <Button type="submit">Pay now</Button>
           <TxList txs={txs} />

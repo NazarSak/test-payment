@@ -26,7 +26,6 @@ export const UserContainer = styled.div`
   padding: 20px;
 `
 
-
 export const Main = styled.main`
   width: 100%;
   height: 100%;
@@ -57,7 +56,6 @@ export const ConnectButton = styled.button`
     background-color: #0056b3;
   }
 `;
-
 
  export const InfoTitle = styled.span`
   font-size: 18px;
