@@ -92,7 +92,7 @@ const UserAccount = () => {
         </Main>
       ) : (
         <WalletContainer>
-          <WalletTitle>Connect your wallet</WalletTitle>
+          <WalletTitle>You are one step away from connecting your wallet</WalletTitle>
           <ConnectButton onClick={Conection}>Connect wallet</ConnectButton>
         </WalletContainer>
       )}

@@ -24,7 +24,6 @@ export const UserContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
-  
 `
 
 
@@ -45,7 +44,7 @@ export const WalletTitle = styled.h2`
 `;
 
 export const ConnectButton = styled.button`
-  padding: 12px 24px;
+  padding: 15px 45px;
   font-size: 16px;
   background-color: #007bff;
   color: #fff;
