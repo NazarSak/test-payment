@@ -24,22 +24,22 @@ export const Button = styled.button`
 
 export const Input = styled.input`
   box-sizing: border-box;
-  color: var(--color-start-text);
+  color: lightblue;
   width: 350px;
-  stroke-width: 1px;
-  stroke: #fff;
   padding: 12px 12px 12px 40px;
   background: transparent;
   border-radius: 6px;
   border: 1px solid gray;
   outline: none;
-  font-family: Poppins;
   font-size: 14px;
   letter-spacing: -0.36px;
   margin-top: 20px;
+  transition: border-color 0.3s ease-in-out;
 
   &:focus,
   &:hover {
-    border: 1px solid blue;
+    border: 1px solid gold;
   }
 `;
+
+

@@ -8,9 +8,12 @@ import {
   WalletTitle,
   ConnectButton,
   InfoTitle,
+  UserContainer,
+  Main,
+  Line,
 } from './userAccount.styled';
 
-const startPayment = async ({ setError, setTxs, ether, addr }) => {
+const startPayment = async ({ setTxs, ether, addr }) => {
   try {
     if (!window.ethereum)
       throw new Error('No crypto wallet found. Please install it.');
@@ -79,14 +82,14 @@ const UserAccount = () => {
   return (
     <>
       {userAccount && balance ? (
-        <main>
-          <WalletContainer>
+        <Main>
+          <UserContainer>
             <InfoTitle>Your Account: {userAccount}</InfoTitle>
             <InfoTitle>Your balance: {balance} ETH</InfoTitle>
-          </WalletContainer>
-
+          </UserContainer>
+          <Line />
           <PaymentForm handleSubmit={handleSubmit} txs={txs} />
-        </main>
+        </Main>
       ) : (
         <WalletContainer>
           <WalletTitle>Connect your wallet</WalletTitle>

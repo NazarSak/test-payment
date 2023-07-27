@@ -1,5 +1,5 @@
 import TxList from 'components/Decorators/TxList';
-import { Wrapper, Button, Input } from './PaymentForm.styled';
+import { Wrapper, Button, Input} from './PaymentForm.styled';
 import { WalletTitle } from 'components/userAccount/userAccount.styled';
 
 const PaymentForm = ({ handleSubmit, txs }) => {
